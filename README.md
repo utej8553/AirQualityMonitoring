@@ -60,3 +60,8 @@ This project demonstrates a real-time air quality monitoring system using Arduin
 - Integration with more sensors (e.g., CO2, PM2.5).
 - Mobile application support for remote monitoring.
 - Advanced AI analytics for detailed environmental reports.
+- 
+## 🏗️ Installation & Setup  
+1. **Clone the repository**  
+   ```sh
+   git clone https://github.com/utej8553/AirQualityMonitoring.git  
