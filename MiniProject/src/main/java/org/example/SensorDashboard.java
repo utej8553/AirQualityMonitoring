@@ -121,7 +121,7 @@ public class SensorDashboard extends JPanel {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=" + "AIzaSyDV_ilxOEhTI_Z48GnlUtWtwcLvldqBCx8"))
+                    .uri(URI.create("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=" + "API_KEY"))
                     .header("Content-Type", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString()))
                     .build();
