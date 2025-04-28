@@ -95,7 +95,6 @@ public class SensorDashboard extends JPanel {
     }
 
     private static String callGeminiAPI(List<List<Integer>> sensorData, String question) {
-        // Clean the first 3 unstable readings
         List<List<Integer>> cleanedData = sensorData.size() > 3 ? sensorData.subList(3, sensorData.size()) : sensorData;
         StringBuilder dataText = new StringBuilder();
         for (List<Integer> row : cleanedData) {
@@ -113,7 +112,6 @@ public class SensorDashboard extends JPanel {
         %s
         """.formatted(dataText.toString(), question);
 
-        // Gemini API Request Payload
         JSONObject requestBody = new JSONObject()
                 .put("contents", new JSONArray().put(new JSONObject()
                         .put("parts", new JSONArray().put(new JSONObject().put("text", prompt)))));
